@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+}
+
+/* A4 size container */
+.resume {
+  display: flex;
+  width: 210mm;
+  min-height: 297mm;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  margin: 20px 0;
+}
+
+/* Sidebar styling */
+.sidebar {
+  background: #3b4b5b;
+  color: #ecf0f1;
+  width: 35%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Profile photo styling */
+.profile-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  display: block;
+  border: 4px solid #fff;
+}
+
+.sidebar h2 {
+  font-size: 1.2em;
+  border-bottom: 1px solid #7f8c8d;
+  padding-bottom: 5px;
+  margin: 20px 0 10px;
+}
+
+.sidebar h3 {
+  margin: 10px 0 5px;
+  font-size: 1em;
+}
+
+.sidebar p {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+.sidebar ul li {
+  margin-bottom: 5px;
+}
+
+/* Main content styling */
+.main-content {
+  width: 65%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4em;
+  color: #2c3e50;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+header h2 {
+  margin: 5px 0 20px;
+  color: #7f8c8d;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.contact-bar {
+  display: flex;
+  flex-wrap: wrap;
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 10px;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  flex: 1 1 45%;
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.main-content section {
+  margin-bottom: 30px;
+}
+
+.main-content h2 {
+  color: #2c3e50;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.job {
+  margin-bottom: 15px;
+}
+
+.job h3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  color: #2c3e50;
+}
+
+.job p {
+  margin: 3px 0;
+  font-size: 0.95em;
+}
+
+.reference {
+  margin-bottom: 15px;
+  font-size: 0.95em;
+}
+
+/* Skills with percentage bars */
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill span {
+  display: block;
+  font-size: 0.95em;
+  margin-bottom: 4px;
+}
+
+.skill-bar {
+  position: relative;
+  background: #d0d3d4;
+  border-radius: 4px;
+  height: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.skill-level {
+  background: #3498db;
+  height: 8px;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Percentage label */
+.skill-level::after {
+  content: attr(data-percent);
+  position: absolute;
+  right: 5px;
+  top: -25px;
+  background: #2c3e50;
+  color: #fff;
+  padding: 3px 6px;
+  font-size: 0.8em;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Optional: Print styles */
+@media print {
+  body {
+    background: #fff;
+  }
+  .resume {
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+    min-height: auto;
+  }
+}
